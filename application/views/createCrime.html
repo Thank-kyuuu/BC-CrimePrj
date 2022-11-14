@@ -1,0 +1,78 @@
+<head>
+  <!-- Bootstrap include -->
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+  />
+
+  <!-- fontawsome -->
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+  />
+
+  <!-- jquery 버전 유의 -->
+  <!-- slim/jquery, 3.1.0 윗 버전에서 ajax가 작동하지 않는 오류 확인 -->
+  <!-- Bootstrap의 CDN을 copy&paste 하되 Line 8의 버전만 3.1.0으로 수정하세요 -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+      <br>
+      <h1>범죄 등록</h1>
+      <p>
+        재판 결과에 따른 범죄 항목을 명확히 기입하시오.
+      </p>
+      <br><br>
+      <!-- 항목 -->
+      <br>
+      <form action="/registCrime" method="post">
+        <label class="form-label">죄수번호</label>
+        <input type="text" name="crimeNumber" class="form-control">
+        <label class="form-label">이름</label>
+        <input type="text" name="name" class="form-control">
+        <label class="form-label">휴대폰번호</label>
+        <input type="text" name="number" class="form-control">
+        <label class="form-label">월렛</label>
+        <input type="text" name="wallet" class="form-control">
+        <label class="form-label">계좌</label>
+        <input type="text" name="account" class="form-control">
+        <label class="form-label">범죄분류</label>
+        <input type="text" name="crimeField" class="form-control">
+        <label class="form-label">범죄내용</label>
+        <input type="text" name="crimeContent" class="form-control">
+        <br>
+        <input type="submit" value="범죄 등록" class="btn btn-dark">
+      </form>
+  </div>
+</body>
+
+<!-- styling -->
+<style>
+  .container {
+      width: 100%;
+      height: 500px;
+      margin: 50px 50px;
+      padding: 20px 20px;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  button {
+      margin: 20px 10px;
+  }
+
+  input {
+      width: 300px;
+      padding: 10px 8px;
+  }
+
+  .col-6 {
+      padding: 20px 10px;
+  }
+</style>
